@@ -121,8 +121,8 @@ margin-right: 50px;
 
 }
 
-.menu-link:hover::after
-.menu-link:focus::after{
+.menu-link:hover,
+.menu-link:focus{
     color: var(--akcent-color);
     
 
@@ -237,7 +237,7 @@ margin-right: 50px;
     font-weight: 900;
     font-size: 44px;
     font-style: normal;
-    line-height: 1.93;
+    line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
@@ -615,7 +615,7 @@ margin-right: 50px;
     border-style: none;
     padding: 6px 22px;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .button-filtr:hover, 
@@ -634,6 +634,7 @@ margin-right: 50px;
     flex-wrap: wrap;
     margin-left:calc(-1* var(--card-set-gap));
     margin-top: calc(-1* var(--card-set-gap));
+   
 
 }
 
@@ -644,15 +645,15 @@ margin-right: 50px;
 }
 .card{
     display: block;
-    border-radius: 4px;
-    
+
 }
 .card:hover,
 .card:focus{
     box-shadow:
         1px 4px 6px 0px rgba(0, 0, 0, 0.16),
-        1px 4px 4px 0px rgba(0, 0, 0, 0.6),
-        0px 1px 1px 0px rgba(0, 0, 0, 0.12);}
+        0px 4px 4px 0px rgba(0, 0, 0, 0.06),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+    }
 
 .card-title{
     color: var(--title-text-color);
@@ -676,6 +677,7 @@ margin-right: 50px;
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
+
 }
 .card-thumb{
     position: relative;
@@ -692,12 +694,13 @@ margin-right: 50px;
     background-color: rgba(33, 150, 243, 0.9);
     padding: 63px 24px;
     transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .card:hover .card-comment,
 .card:focus .card-comment{
     transform: translateY(0);
+    
 }
 
 /* модальное окно */
